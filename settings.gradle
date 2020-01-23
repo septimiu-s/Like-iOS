@@ -1,0 +1,2 @@
+include ':app', ':like-ios-btsh'
+rootProject.name='Like-iOS-BTSH'

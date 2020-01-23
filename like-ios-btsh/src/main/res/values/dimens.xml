@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="size_8">8dp</dimen>
+    <dimen name="size_14">14dp</dimen>
+    <dimen name="size_20">20dp</dimen>
+    <dimen name="font_size_14">14sp</dimen>
+    <dimen name="font_size_19">19sp</dimen>
+    <dimen name="divider_px_2">2px</dimen>
+    <dimen name="corner_radius_10">10dp</dimen>
+</resources>
