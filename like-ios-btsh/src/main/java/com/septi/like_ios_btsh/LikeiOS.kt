@@ -10,35 +10,49 @@ import android.view.ViewGroup
 import android.widget.AdapterView
 import android.widget.BaseAdapter
 import android.widget.TextView
+import androidx.fragment.app.FragmentManager
 import com.google.android.material.bottomsheet.BottomSheetBehavior
 import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import com.septi.like_ios_btsh.models.DialogItem
 import kotlinx.android.synthetic.main.fragment_bottom_sheet.view.*
-import java.util.*
 
-class IosLikeBtsh() : BottomSheetDialogFragment() {
+class LikeiOS(
+    val fragManager: FragmentManager?,
+    val listener: OnSelectionListener?,
+    val title: String?,
+    val options: ArrayList<DialogItem>?
+) : BottomSheetDialogFragment() {
 
-    private lateinit var mOnSelectionListener: OnSelectionListener
+    private constructor(builder: Builder) : this(
+        builder.fragmentManager,
+        builder.listener,
+        builder.title,
+        builder.options
+    )
 
-    companion object {
-        fun show(
-            fragmentManager: androidx.fragment.app.FragmentManager,
-            title: String,
-            options: ArrayList<DialogItem>,
-            OnSelectionListener: OnSelectionListener
-        ) =
-            IosLikeBtsh().apply {
-                this.mOnSelectionListener = OnSelectionListener
-                this.options = options
-                this.title = title
-                show(fragmentManager, UUID.randomUUID().toString())
-            }
+    class Builder {
+        lateinit var fragmentManager: FragmentManager
+            private set
+        lateinit var listener: OnSelectionListener
+            private set
+        lateinit var title: String
+            private set
+        lateinit var options: ArrayList<DialogItem>
+            private set
+
+        fun fragmentManager(fragmentManager: FragmentManager) =
+            apply { this.fragmentManager = fragmentManager }
+
+        fun listener(listener: OnSelectionListener) = apply { this.listener = listener }
+        fun title(title: String) = apply { this.title = title }
+        fun options(options: ArrayList<DialogItem>) = apply { this.options = options }
+
+        fun build() = LikeiOS(this)
     }
 
-    private lateinit var adapter: DialogAdapter
-    private lateinit var options: ArrayList<DialogItem>
-    private lateinit var title: String
+    private lateinit var adapter: DialogAdapter2
+    private lateinit var mOnSelectionListener: OnSelectionListener
 
     override fun setupDialog(dialog: Dialog, style: Int) {
         super.setupDialog(dialog, style)
@@ -46,10 +60,10 @@ class IosLikeBtsh() : BottomSheetDialogFragment() {
         dialog.setContentView(contentView)
         contentView.list_view_dialog.onItemClickListener =
             AdapterView.OnItemClickListener { _, _, position, _ ->
-                mOnSelectionListener.onSelection(options[position].text)
+                mOnSelectionListener.onSelection(options!![position].text)
                 dismiss()
             }
-        adapter = DialogAdapter(context!!, options)
+        adapter = DialogAdapter2(context!!, options!!)
         contentView.tv_dialog_cancel.setOnClickListener {
             dismiss()
         }
@@ -79,7 +93,7 @@ class IosLikeBtsh() : BottomSheetDialogFragment() {
     }
 }
 
-class DialogAdapter(private var context: Context, private var items: ArrayList<DialogItem>) :
+class DialogAdapter2(private var context: Context, private var items: ArrayList<DialogItem>) :
     BaseAdapter() {
     private class ViewHolder(row: View?) {
         var optionName: TextView? = null
