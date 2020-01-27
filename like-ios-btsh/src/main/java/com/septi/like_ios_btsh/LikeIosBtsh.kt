@@ -1,5 +1,6 @@
 package com.septi.like_ios_btsh
 
+import android.app.Dialog
 import android.content.Context
 import android.graphics.Color
 import android.os.Bundle
@@ -9,10 +10,9 @@ import android.view.ViewGroup
 import android.widget.AdapterView
 import android.widget.BaseAdapter
 import android.widget.TextView
-import androidx.databinding.DataBindingUtil
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
-import com.septi.like_ios_btsh.databinding.FragmentBottomSheetBinding
 import com.septi.like_ios_btsh.models.DialogItem
+import kotlinx.android.synthetic.main.fragment_bottom_sheet.view.*
 import java.util.*
 
 class IosLikeBtsh : BottomSheetDialogFragment() {
@@ -34,21 +34,20 @@ class IosLikeBtsh : BottomSheetDialogFragment() {
             }
     }
 
-    lateinit var binding: FragmentBottomSheetBinding
     lateinit var adapter: DialogAdapter
     private lateinit var options: ArrayList<DialogItem>
     private lateinit var title: String
 
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        binding =
-            DataBindingUtil.inflate(
-                inflater,
-                R.layout.fragment_bottom_sheet, container, false
-            )
+//    override fun onCreateView(
+//        inflater: LayoutInflater,
+//        container: ViewGroup?,
+//        savedInstanceState: Bundle?
+//    ): View? {
+//        binding =
+//            DataBindingUtil.inflate(
+//                inflater,
+//                R.layout.fragment_bottom_sheet, container, false
+//            )
 //        dialog?.setOnShowListener {
 //            val dialog = it as BottomSheetDialog
 //            val bottomSheet = dialog.findViewById<View>(R.id.design_bottom_sheet)
@@ -57,22 +56,49 @@ class IosLikeBtsh : BottomSheetDialogFragment() {
 //                sheet.parent.parent.requestLayout()
 //            }
 //        }
-        adapter = DialogAdapter(activity!!.applicationContext, options)
-        binding.listViewDialog.onItemClickListener =
+//        adapter = DialogAdapter(activity!!.applicationContext, options)
+//        binding.listViewDialog.onItemClickListener =
+//            AdapterView.OnItemClickListener { _, _, position, _ ->
+//                val item = options[position]
+//                //item.listener.onItemClicked(item)
+//                mOnSelectionListener.onSelection(item.text)
+//                dismiss()
+//            }
+//        binding.tvDialogCancel.setOnClickListener {
+//            dismiss()
+//        }
+//        binding.tvDialogTitle.text = title
+//        binding.listViewDialog.adapter = this.adapter
+//        adapter.notifyDataSetChanged()
+//        return binding.root
+//    }
+
+    override fun setupDialog(dialog: Dialog, style: Int) {
+        super.setupDialog(dialog, style)
+        val contentView = View.inflate(context, R.layout.fragment_bottom_sheet, null)
+        dialog.setContentView(contentView)
+//        dialog.setOnShowListener {
+//            val d = it as BottomSheetDialog
+//            val bottomSheet = d.findViewById<View>(R.id.design_bottom_sheet)
+//            bottomSheet?.let { sheet ->
+//                d.behavior.peekHeight = sheet.height
+//                sheet.parent.parent.requestLayout()
+//            }
+//        }
+        contentView.list_view_dialog.onItemClickListener =
             AdapterView.OnItemClickListener { _, _, position, _ ->
-                val item = options[position]
-                //item.listener.onItemClicked(item)
-                mOnSelectionListener.onSelection(item.text)
+                mOnSelectionListener.onSelection(options[position].text)
                 dismiss()
             }
-        binding.tvDialogCancel.setOnClickListener {
+        adapter = DialogAdapter(context!!, options)
+        contentView.tv_dialog_cancel.setOnClickListener {
             dismiss()
         }
-        binding.tvDialogTitle.text = title
-        binding.listViewDialog.adapter = this.adapter
+        contentView.tv_dialog_title.text = title
+        contentView.list_view_dialog.adapter = this.adapter
         adapter.notifyDataSetChanged()
-        return binding.root
     }
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
