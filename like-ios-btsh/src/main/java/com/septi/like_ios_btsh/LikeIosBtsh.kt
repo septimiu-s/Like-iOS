@@ -2,7 +2,6 @@ package com.septi.like_ios_btsh
 
 import android.app.Dialog
 import android.content.Context
-import android.graphics.Color
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -104,7 +103,7 @@ class DialogAdapter(private var context: Context, private var items: ArrayList<D
         }
         val option = items[position]
         viewHolder.optionName?.text = option.text
-        viewHolder.optionName?.setTextColor(Color.parseColor(option.color))
+        //viewHolder.optionName?.setTextColor(Color.parseColor(option.color))
         return view
     }
 

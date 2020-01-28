@@ -2,7 +2,7 @@ package com.septi.like_ios_btsh
 
 import android.app.Dialog
 import android.content.Context
-import android.graphics.Color
+import android.content.res.Resources
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -16,43 +16,52 @@ import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import com.septi.like_ios_btsh.models.DialogItem
 import kotlinx.android.synthetic.main.fragment_bottom_sheet.view.*
+import java.util.*
 
 class LikeiOS(
-    val fragManager: FragmentManager?,
-    val listener: OnSelectionListener?,
-    val title: String?,
-    val options: ArrayList<DialogItem>?
+    private val fragManager: FragmentManager,
+    private val listener: OnSelectionListener,
+    private val title: String,
+    private val options: ArrayList<DialogItem>
 ) : BottomSheetDialogFragment() {
 
-    private constructor(builder: Builder) : this(
-        builder.fragmentManager,
-        builder.listener,
-        builder.title,
-        builder.options
-    )
+    private lateinit var adapter: DialogAdapter2
+    private lateinit var mOnSelectionListener: OnSelectionListener
 
-    class Builder {
-        lateinit var fragmentManager: FragmentManager
-            private set
-        lateinit var listener: OnSelectionListener
-            private set
-        lateinit var title: String
-            private set
-        lateinit var options: ArrayList<DialogItem>
-            private set
-
+    class Builder(
+        var fragmentManager: FragmentManager? = null,
+        var listener: OnSelectionListener? = null,
+        var title: String? = null,
+        var options: ArrayList<DialogItem>? = null
+    ) {
         fun fragmentManager(fragmentManager: FragmentManager) =
             apply { this.fragmentManager = fragmentManager }
 
         fun listener(listener: OnSelectionListener) = apply { this.listener = listener }
+        fun addItem(text: String, color: Int = R.color.blue_ios) =
+            apply {
+                options?.add(DialogItem(text, color))
+            }
+
         fun title(title: String) = apply { this.title = title }
-        fun options(options: ArrayList<DialogItem>) = apply { this.options = options }
 
-        fun build() = LikeiOS(this)
+        fun build() = fragmentManager?.let {
+            listener?.let {
+                title?.let {
+                    options?.let {
+                        LikeiOS(
+                            fragmentManager!!,
+                            listener!!,
+                            title!!,
+                            options!!
+                        )
+                    }
+                }
+            }
+        }
+
+        fun show() = build()?.show(fragmentManager!!, UUID.randomUUID().toString())
     }
-
-    private lateinit var adapter: DialogAdapter2
-    private lateinit var mOnSelectionListener: OnSelectionListener
 
     override fun setupDialog(dialog: Dialog, style: Int) {
         super.setupDialog(dialog, style)
@@ -60,10 +69,10 @@ class LikeiOS(
         dialog.setContentView(contentView)
         contentView.list_view_dialog.onItemClickListener =
             AdapterView.OnItemClickListener { _, _, position, _ ->
-                mOnSelectionListener.onSelection(options!![position].text)
+                mOnSelectionListener.onSelection(options[position].text)
                 dismiss()
             }
-        adapter = DialogAdapter2(context!!, options!!)
+        adapter = DialogAdapter2(context!!, options)
         contentView.tv_dialog_cancel.setOnClickListener {
             dismiss()
         }
@@ -118,7 +127,7 @@ class DialogAdapter2(private var context: Context, private var items: ArrayList<
         }
         val option = items[position]
         viewHolder.optionName?.text = option.text
-        viewHolder.optionName?.setTextColor(Color.parseColor(option.color))
+        viewHolder.optionName?.setTextColor(Resources.getSystem().getColor(option.color))
         return view
     }
 
