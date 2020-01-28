@@ -1,4 +1,4 @@
-# Like-iOS-BTSHD
+# Like-iOS
 
 How to use the library in your project:
 
