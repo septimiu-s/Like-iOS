@@ -18,39 +18,9 @@
       <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/app/app.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/androidTest/java/com/septi/like_ios_btsh/ExampleInstrumentedTest.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/septi/like_ios_btsh/MainActivity.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ic_launcher_background.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-hdpi/ic_launcher.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-hdpi/ic_launcher_round.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-mdpi/ic_launcher.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-mdpi/ic_launcher_round.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xhdpi/ic_launcher.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xhdpi/ic_launcher_round.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi/ic_launcher.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/styles.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/test/java/com/septi/like_ios_btsh/ExampleUnitTest.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/like-ios-btsh/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/like-ios-btsh/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/like-ios-btsh/like-ios-btsh.iml" beforeDir="false" afterPath="$PROJECT_DIR$/like-ios-btsh/like-ios-btsh.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/like-ios-btsh/src/androidTest/java/com/septi/like_ios_btsh/ExampleInstrumentedTest.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/like-ios-btsh/src/main/java/com/septi/like_ios_btsh/LikeIosBtsh.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/like-ios-btsh/src/main/java/com/septi/like_ios_btsh/LikeiOS.kt" beforeDir="false" afterPath="$PROJECT_DIR$/like-ios-btsh/src/main/java/com/septi/like_ios_btsh/LikeiOS.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/like-ios-btsh/src/main/res/drawable/divider.xml" beforeDir="false" afterPath="$PROJECT_DIR$/like-ios-btsh/src/main/res/drawable/divider.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/like-ios-btsh/src/main/res/drawable/rounded_dialog.xml" beforeDir="false" afterPath="$PROJECT_DIR$/like-ios-btsh/src/main/res/drawable/rounded_dialog_gray.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/like-ios-btsh/src/main/res/layout/fragment_bottom_sheet.xml" beforeDir="false" afterPath="$PROJECT_DIR$/like-ios-btsh/src/main/res/layout/fragment_bottom_sheet.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/like-ios-btsh/src/test/java/com/septi/like_ios_btsh/ExampleUnitTest.kt" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -90,11 +60,17 @@
         <entry file="file://$PROJECT_DIR$/like-ios-btsh/src/main/res/layout/fragment_bottom_sheet.xml">
           <provider editor-type-id="android-designer2" />
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="765">
-              <caret line="50" column="27" lean-forward="true" selection-start-line="50" selection-start-column="27" selection-end-line="50" selection-end-column="27" />
-              <folding>
-                <element signature="e#919#940#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="204">
+              <caret line="17" column="48" lean-forward="true" selection-start-line="17" selection-start-column="48" selection-end-line="17" selection-end-column="48" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/like-ios-btsh/src/main/res/drawable/rounded_dialog_gray.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="9" column="8" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -106,9 +82,9 @@
       <list>
         <option value="valueResourceFile" />
         <option value="layoutResourceFile_vertical" />
-        <option value="resourceFile" />
         <option value="Kotlin Script" />
         <option value="Kotlin File" />
+        <option value="resourceFile" />
       </list>
     </option>
   </component>
@@ -138,15 +114,16 @@
         <option value="$PROJECT_DIR$/like-ios-btsh/src/main/res/layout/item_bottom_sheet.xml" />
         <option value="$PROJECT_DIR$/like-ios-btsh/src/main/java/com/septi/like_ios_btsh/LikeIosBtsh.kt" />
         <option value="$PROJECT_DIR$/like-ios-btsh/src/main/res/values/styles.xml" />
-        <option value="$PROJECT_DIR$/like-ios-btsh/src/main/res/values/dimens.xml" />
         <option value="$PROJECT_DIR$/like-ios-btsh/src/main/java/com/septi/like_ios_btsh/utils/GeneralUtils.kt" />
         <option value="$PROJECT_DIR$/like-ios-btsh/src/main/java/com/septi/like_ios_btsh/models/DialogItem.kt" />
         <option value="$PROJECT_DIR$/like-ios-btsh/src/main/res/values/colors.xml" />
         <option value="$PROJECT_DIR$/like-ios-btsh/src/main/java/com/septi/like_ios_btsh/LikeiOS.kt" />
         <option value="$PROJECT_DIR$/like-ios-btsh/build.gradle" />
         <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
-        <option value="$PROJECT_DIR$/like-ios-btsh/src/main/res/layout/fragment_bottom_sheet.xml" />
         <option value="$PROJECT_DIR$/like-ios-btsh/src/main/res/drawable/divider.xml" />
+        <option value="$PROJECT_DIR$/like-ios-btsh/src/main/res/values/dimens.xml" />
+        <option value="$PROJECT_DIR$/like-ios-btsh/src/main/res/drawable/rounded_dialog_white.xml" />
+        <option value="$PROJECT_DIR$/like-ios-btsh/src/main/res/layout/fragment_bottom_sheet.xml" />
       </list>
     </option>
   </component>
@@ -252,6 +229,12 @@
               <item name="like-ios-btsh" type="feadf853:AndroidModuleNode" />
               <item name="res" type="d4f16f75:AndroidResFolderNode" />
               <item name="layout" type="ddeffd01:AndroidResFolderTypeNode" />
+            </path>
+            <path>
+              <item name="Like-iOS-BTSH" type="1abcf292:AndroidViewProjectNode" />
+              <item name="like-ios-btsh" type="feadf853:AndroidModuleNode" />
+              <item name="res" type="d4f16f75:AndroidResFolderNode" />
+              <item name="values" type="ddeffd01:AndroidResFolderTypeNode" />
             </path>
             <path>
               <item name="Like-iOS-BTSH" type="1abcf292:AndroidViewProjectNode" />
@@ -415,7 +398,7 @@
     <layout>
       <window_info id="Captures" order="0" side_tool="true" weight="0.25" />
       <window_info id="Capture Tool" order="1" />
-      <window_info content_ui="combo" id="Project" order="2" visible="true" weight="0.19009675" />
+      <window_info active="true" content_ui="combo" id="Project" order="2" visible="true" weight="0.19009675" />
       <window_info id="Structure" order="3" side_tool="true" />
       <window_info id="Favorites" order="4" side_tool="true" />
       <window_info id="Build Variants" order="5" side_tool="true" />
@@ -436,7 +419,7 @@
       <window_info anchor="right" id="Capture Analysis" order="1" />
       <window_info anchor="right" id="Gradle" order="2" weight="0.329539" />
       <window_info anchor="right" id="Theme Preview" order="3" />
-      <window_info active="true" anchor="right" id="Preview" order="4" visible="true" weight="0.329539" />
+      <window_info anchor="right" id="Preview" order="4" visible="true" weight="0.329539" />
       <window_info anchor="right" id="make" order="5" />
       <window_info anchor="right" id="Palette&#9;" order="6" />
       <window_info anchor="right" id="Key Promoter X" order="7" />
@@ -488,13 +471,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/like-ios-btsh/src/main/res/drawable/rounded_dialog.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="8" lean-forward="true" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/like-ios-btsh/src/main/res/values/strings.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
@@ -506,13 +482,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="9" column="60" selection-start-line="9" selection-start-column="60" selection-end-line="9" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/like-ios-btsh/src/main/res/values/dimens.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="38" selection-start-line="3" selection-start-column="38" selection-end-line="3" selection-end-column="38" />
         </state>
       </provider>
     </entry>
@@ -578,6 +547,19 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/like-ios-btsh/src/main/res/drawable/rounded_dialog_white.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="8" lean-forward="true" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
+          <folding>
+            <element signature="e#238#263#0" expanded="true" />
+            <element signature="e#298#323#0" expanded="true" />
+            <element signature="e#354#379#0" expanded="true" />
+            <element signature="e#411#436#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/like-ios-btsh/src/main/res/layout/item_bottom_sheet.xml">
       <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
@@ -589,14 +571,25 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/like-ios-btsh/src/main/res/values/dimens.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="30" selection-start-line="3" selection-start-column="30" selection-end-line="3" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/like-ios-btsh/src/main/res/drawable/rounded_dialog_gray.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="8" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/like-ios-btsh/src/main/res/layout/fragment_bottom_sheet.xml">
       <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="765">
-          <caret line="50" column="27" lean-forward="true" selection-start-line="50" selection-start-column="27" selection-end-line="50" selection-end-column="27" />
-          <folding>
-            <element signature="e#919#940#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="204">
+          <caret line="17" column="48" lean-forward="true" selection-start-line="17" selection-start-column="48" selection-end-line="17" selection-end-column="48" />
         </state>
       </provider>
     </entry>
