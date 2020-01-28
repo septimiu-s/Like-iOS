@@ -32,7 +32,7 @@ class LikeiOS(
         var fragmentManager: FragmentManager? = null,
         var listener: OnSelectionListener? = null,
         var title: String? = null,
-        var options: ArrayList<DialogItem>? = null
+        var options: ArrayList<DialogItem> = ArrayList()
     ) {
         fun fragmentManager(fragmentManager: FragmentManager) =
             apply { this.fragmentManager = fragmentManager }
@@ -40,7 +40,7 @@ class LikeiOS(
         fun listener(listener: OnSelectionListener) = apply { this.listener = listener }
         fun addItem(text: String, color: Int = R.color.blue_ios) =
             apply {
-                options?.add(DialogItem(text, color))
+                options.add(DialogItem(text, color))
             }
 
         fun title(title: String) = apply { this.title = title }
@@ -48,19 +48,17 @@ class LikeiOS(
         fun build() = fragmentManager?.let {
             listener?.let {
                 title?.let {
-                    options?.let {
-                        LikeiOS(
-                            fragmentManager!!,
-                            listener!!,
-                            title!!,
-                            options!!
-                        )
-                    }
+                    LikeiOS(
+                        fragmentManager!!,
+                        listener!!,
+                        title!!,
+                        options
+                    )
                 }
             }
         }
 
-        fun show() = build()?.show(fragmentManager!!, UUID.randomUUID().toString())
+        fun show() = build()!!.show(fragmentManager!!, UUID.randomUUID().toString())
     }
 
     override fun setupDialog(dialog: Dialog, style: Int) {
