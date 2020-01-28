@@ -2,7 +2,6 @@ package com.septi.like_ios_btsh
 
 import android.app.Dialog
 import android.content.Context
-import android.graphics.Color
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -10,17 +9,16 @@ import android.view.ViewGroup
 import android.widget.AdapterView
 import android.widget.BaseAdapter
 import android.widget.TextView
+import androidx.core.content.ContextCompat
 import androidx.fragment.app.FragmentManager
 import com.google.android.material.bottomsheet.BottomSheetBehavior
 import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import com.septi.like_ios_btsh.models.DialogItem
-import com.septi.like_ios_btsh.utils.convertIntToHexColor
 import kotlinx.android.synthetic.main.fragment_bottom_sheet.view.*
 import java.util.*
 
 class LikeiOS(
-    private val fragManager: FragmentManager,
     private val listener: OnSelectionListener,
     private val title: String,
     private val options: ArrayList<DialogItem>
@@ -38,10 +36,13 @@ class LikeiOS(
         fun fragmentManager(fragmentManager: FragmentManager) =
             apply { this.fragmentManager = fragmentManager }
 
-        fun listener(listener: OnSelectionListener) = apply { this.listener = listener }
-        fun addItem(text: String, color: Int = R.color.blue_ios) =
+        fun listener(listener: OnSelectionListener) = apply {
+            this.listener = listener
+        }
+
+        fun addItem(text: String, isRed: Boolean = false) =
             apply {
-                options.add(DialogItem(text, color))
+                options.add(DialogItem(text, isRed))
             }
 
         fun title(title: String) = apply { this.title = title }
@@ -50,7 +51,6 @@ class LikeiOS(
             listener?.let {
                 title?.let {
                     LikeiOS(
-                        fragmentManager!!,
                         listener!!,
                         title!!,
                         options
@@ -66,6 +66,7 @@ class LikeiOS(
         super.setupDialog(dialog, style)
         val contentView = View.inflate(context, R.layout.fragment_bottom_sheet, null)
         dialog.setContentView(contentView)
+        mOnSelectionListener = listener
         contentView.list_view_dialog.onItemClickListener =
             AdapterView.OnItemClickListener { _, _, position, _ ->
                 mOnSelectionListener.onSelection(options[position].text)
@@ -126,7 +127,14 @@ class DialogAdapter2(private var context: Context, private var items: ArrayList<
         }
         val option = items[position]
         viewHolder.optionName?.text = option.text
-        viewHolder.optionName?.setTextColor(Color.parseColor(convertIntToHexColor(option.color)))
+        if (option.isRed) {
+            viewHolder.optionName?.setTextColor(ContextCompat.getColor(context, R.color.red_ios))
+        } else viewHolder.optionName?.setTextColor(
+            ContextCompat.getColor(
+                context,
+                R.color.blue_ios
+            )
+        )
         return view
     }
 

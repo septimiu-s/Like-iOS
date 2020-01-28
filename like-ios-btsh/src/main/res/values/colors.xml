@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="dialogs_background">#E6FFFFFF</color>
-    <color name="blue_ios">#007AFD</color>
+    <color name="blue_ios">#007AFF</color>
+    <color name="red_ios">#FF3B30</color>
 </resources>
