@@ -2,7 +2,7 @@ package com.septi.like_ios_btsh
 
 import android.app.Dialog
 import android.content.Context
-import android.content.res.Resources
+import android.graphics.Color
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -15,6 +15,7 @@ import com.google.android.material.bottomsheet.BottomSheetBehavior
 import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import com.septi.like_ios_btsh.models.DialogItem
+import com.septi.like_ios_btsh.utils.convertIntToHexColor
 import kotlinx.android.synthetic.main.fragment_bottom_sheet.view.*
 import java.util.*
 
@@ -125,7 +126,7 @@ class DialogAdapter2(private var context: Context, private var items: ArrayList<
         }
         val option = items[position]
         viewHolder.optionName?.text = option.text
-        viewHolder.optionName?.setTextColor(Resources.getSystem().getColor(option.color))
+        viewHolder.optionName?.setTextColor(Color.parseColor(convertIntToHexColor(option.color)))
         return view
     }
 
