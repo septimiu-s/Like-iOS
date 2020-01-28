@@ -24,7 +24,7 @@ class LikeiOS(
     private val options: ArrayList<DialogItem>
 ) : BottomSheetDialogFragment() {
 
-    private lateinit var adapter: DialogAdapter2
+    private lateinit var adapter: DialogAdapter
     private lateinit var mOnSelectionListener: OnSelectionListener
 
     class Builder(
@@ -72,7 +72,7 @@ class LikeiOS(
                 mOnSelectionListener.onSelection(options[position].text)
                 dismiss()
             }
-        adapter = DialogAdapter2(context!!, options)
+        adapter = DialogAdapter(context!!, options)
         contentView.tv_dialog_cancel.setOnClickListener {
             dismiss()
         }
@@ -102,7 +102,7 @@ class LikeiOS(
     }
 }
 
-class DialogAdapter2(private var context: Context, private var items: ArrayList<DialogItem>) :
+class DialogAdapter(private var context: Context, private var items: ArrayList<DialogItem>) :
     BaseAdapter() {
     private class ViewHolder(row: View?) {
         var optionName: TextView? = null
