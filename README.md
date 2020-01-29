@@ -1,5 +1,5 @@
 # Like-iOS
-
+(latest version 0.2.7)
 How to use the library in your project:
 
 Step 1. 
@@ -10,7 +10,7 @@ Step 1.
 			        ...
 			        maven { url 'https://jitpack.io' }
 		        }
-	      }
+	}
         
 Step 2.
   Add the dependency inside your build.gradle(app module) & the Google Material dependency to be able to use the BottomSheetDialogFragment
