@@ -24,6 +24,8 @@
 
 #### Example:
 
+<img src="https://user-images.githubusercontent.com/41394271/73343012-75596600-4288-11ea-9d98-0290007ed1a3.png" width="360" height="720">
+
 #### Step 1. 
 Declare and implement your OnSelectionListener
 ```
