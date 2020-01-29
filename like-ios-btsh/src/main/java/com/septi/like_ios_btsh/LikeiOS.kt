@@ -28,10 +28,10 @@ class LikeiOS(
     private lateinit var mOnSelectionListener: OnSelectionListener
 
     class Builder(
-        var fragmentManager: FragmentManager? = null,
-        var listener: OnSelectionListener? = null,
-        var title: String? = null,
-        var options: ArrayList<DialogItem> = ArrayList()
+        private var fragmentManager: FragmentManager? = null,
+        private var listener: OnSelectionListener? = null,
+        private var title: String? = null,
+        private var options: ArrayList<DialogItem> = ArrayList()
     ) {
         fun fragmentManager(fragmentManager: FragmentManager) =
             apply { this.fragmentManager = fragmentManager }
@@ -47,7 +47,7 @@ class LikeiOS(
 
         fun title(title: String) = apply { this.title = title }
 
-        fun build() = fragmentManager?.let {
+        private fun build() =
             listener?.let {
                 title?.let {
                     LikeiOS(
@@ -55,11 +55,11 @@ class LikeiOS(
                         title!!,
                         options
                     )
+
                 }
             }
-        }
 
-        fun show() = build()!!.show(fragmentManager!!, UUID.randomUUID().toString())
+        fun buildAndShow() = build()!!.show(fragmentManager!!, UUID.randomUUID().toString())
     }
 
     override fun setupDialog(dialog: Dialog, style: Int) {
