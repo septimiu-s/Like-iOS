@@ -28,7 +28,7 @@
 
 #### Step 1. 
 Declare and implement your OnSelectionListener
-```
+```kotlin
 private val mOnSelectionListener = object : LikeiOS.OnSelectionListener {
         override fun onSelection(option: String) {
             TODO: what will happen when an option is press - option = text from the option pressed
@@ -37,7 +37,7 @@ private val mOnSelectionListener = object : LikeiOS.OnSelectionListener {
 
 #### Step 2. 
 Create the builder and show it!
-```
+```kotlin
 LikeiOS.Builder()
                 .fragmentManager(supportFragmentManager)
                 .listener(mOnSelectionListener)
