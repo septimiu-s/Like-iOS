@@ -4,7 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Like-iOS-BTSH.iml" filepath="$PROJECT_DIR$/Like-iOS-BTSH.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/like-ios-btsh/like-ios-btsh.iml" filepath="$PROJECT_DIR$/like-ios-btsh/like-ios-btsh.iml" />
+      <module fileurl="file://$PROJECT_DIR$/like-ios/like-ios.iml" filepath="$PROJECT_DIR$/like-ios/like-ios.iml" />
     </modules>
   </component>
 </project>

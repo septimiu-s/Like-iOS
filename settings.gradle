@@ -1,2 +1,2 @@
-include ':app', ':like-ios-btsh'
+include ':app', ':like-ios'
 rootProject.name='Like-iOS-BTSH'
