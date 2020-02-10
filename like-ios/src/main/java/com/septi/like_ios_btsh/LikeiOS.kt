@@ -83,8 +83,8 @@ class LikeiOS(
         dialog.setOnShowListener {
             val d = it as BottomSheetDialog
             val bottomSheet = d.findViewById<View>(R.id.design_bottom_sheet)
-            val behavior = BottomSheetBehavior.from(bottomSheet)
-            bottomSheet?.let { sheet ->
+            val behavior = BottomSheetBehavior.from(bottomSheet!!)
+            bottomSheet.let { sheet ->
                 behavior.peekHeight = sheet.height
                 sheet.parent.parent.requestLayout()
             }
