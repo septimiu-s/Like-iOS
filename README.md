@@ -19,7 +19,7 @@
             implementation 'com.github.ssepty10:Like-iOS:VERSION'
             implementation 'com.google.android.material:material:VERSION'
 	    }
-  
+  Material latest version [![](https://jitpack.io/v/material-components/material-components-android.svg)](https://jitpack.io/#material-components/material-components-android)
 ## USAGE
 
 #### Example:
