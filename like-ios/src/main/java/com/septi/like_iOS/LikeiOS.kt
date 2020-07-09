@@ -1,4 +1,4 @@
-package com.septi.like_ios_btsh
+package com.septi.like_iOS
 
 import android.app.Dialog
 import android.content.Context
@@ -14,7 +14,7 @@ import androidx.fragment.app.FragmentManager
 import com.google.android.material.bottomsheet.BottomSheetBehavior
 import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
-import com.septi.like_ios_btsh.models.DialogItem
+import com.septi.like_iOS.models.DialogItem
 import kotlinx.android.synthetic.main.fragment_bottom_sheet.view.*
 import java.util.*
 
@@ -63,7 +63,6 @@ class LikeiOS(
     }
 
     override fun setupDialog(dialog: Dialog, style: Int) {
-        super.setupDialog(dialog, style)
         val contentView = View.inflate(context, R.layout.fragment_bottom_sheet, null)
         dialog.setContentView(contentView)
         mOnSelectionListener = listener

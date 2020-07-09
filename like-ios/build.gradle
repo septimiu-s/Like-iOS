@@ -2,19 +2,43 @@ apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-kapt'
 apply plugin: 'kotlin-android-extensions'
+apply plugin: 'com.jfrog.bintray'
+apply plugin: 'com.github.dcendents.android-maven'
+
+def version = '1.0.0'
+
+//ext {
+//    bintrayRepo = 'Like-iOS' // your repo name
+//    bintrayName = 'like-ios' // has to be same as your library module name
+//    publishedGroupId = 'com.septi.like_ios_btsh' // your module package name
+//    libraryName = 'Like-iOS'
+//    artifact = 'like-ios' // has to be same as your library module name
+//    libraryDescription = 'A set of methods used to manipulate time object'
+//    siteUrl = 'https://github.com/ssepty10/Like-iOS'
+//    gitUrl = 'https://github.com/ssepty10/Like-iOS.git'
+//    libraryVersion = version
+//    developerId = 'ssepty10'
+//    developerName = 'Septimiu Samartineanu'
+//    developerEmail = 'ssepty10@gmail.com'
+//    licenseName = 'The Apache Software License, Version 2.0'
+//    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+//    allLicenses = ["Apache-2.0"]
+//}
+
 android {
     compileSdkVersion 29
     buildToolsVersion "29.0.3"
-
-
     defaultConfig {
         minSdkVersion 16
         targetSdkVersion 29
-        versionCode 1
-        versionName "1.0"
-
+        versionCode 2
+        versionName version
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles 'consumer-rules.pro'
+    }
+
+    lintOptions {
+        abortOnError false
     }
 
     buildTypes {
@@ -30,5 +54,15 @@ dependencies {
     implementation 'androidx.appcompat:appcompat:1.1.0'
 }
 
-apply plugin: 'com.github.dcendents.android-maven'
-group='com.github.ssepty10'
+tasks.withType(Javadoc) {
+    failOnError false
+    options.addStringOption('Xdoclint:none', '-quiet')
+    options.addStringOption('encoding', 'UTF-8')
+    options.addStringOption('charSet', 'UTF-8')
+}
+//
+//apply from: 'https://raw.githubusercontent.com/numetriclabz/jcenter/master/installv.gradle'
+//apply from: 'https://raw.githubusercontent.com/numetriclabz/jcenter/master/bintrayv.gradle'
+
+apply from: 'install.gradle'
+apply from: 'bintray.gradle'

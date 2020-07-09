@@ -1,4 +1,4 @@
-package com.septi.like_ios_btsh.models
+package com.septi.like_iOS.models
 
 data class DialogItem(
     val text: String,

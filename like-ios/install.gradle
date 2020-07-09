@@ -1,0 +1,39 @@
+apply plugin: 'com.github.dcendents.android-maven'
+
+group = 'com.septi.like_iOS'
+
+install {
+    repositories.mavenInstaller {
+        pom {
+            project {
+                packaging 'aar'
+                groupId 'com.septi.like_iOS'
+                artifactId 'like-ios'
+                name 'Like-iOS'
+                description 'An android library.'
+                url 'https://github.com/ssepty10/Like-iOS'
+
+                licenses {
+                    license {
+                        name 'The Apache Software License, Version 2.0'
+                        url 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+                    }
+                }
+
+                developers {
+                    developer {
+                        id 'ssepty10'
+                        name 'Septimiu Samartineanu'
+                        email 'ssepty10@gmail.com'
+                    }
+                }
+
+                scm {
+                    connection 'https://github.com/ssepty10/Like-iOS.git'
+                    developerConnection 'https://github.com/ssepty10/Like-iOS.git'
+                    url 'https://github.com/ssepty10/Like-iOS'
+                }
+            }
+        }
+    }
+}
